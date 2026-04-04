@@ -8,8 +8,8 @@ FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 WORKDIR /src
 
 # Step 2a: Copy all .csproj files first (matching your exact spelling)
-COPY ["Romance.WebAPI/Romance.WebAPI.csproj", "Romance.WebAPI/"]
-COPY ["Romance.Domain/Romance.Domain.csproj", "Romance.Domain/"]
+COPY ["Rowmance.WebAPI/Rowmance.WebAPI.csproj", "Rowmance.WebAPI/"]
+COPY ["Rowmance.Domain/Rowmance.Domain.csproj", "Rowmance.Domain/"]
 COPY ["Rowmance.Application/Rowmance.Application.csproj", "Rowmance.Application/"]
 COPY ["Rowmance.Infrastructure/Rowmance.Infrastructure.csproj", "Rowmance.Infrastructure/"]
 

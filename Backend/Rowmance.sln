@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
-VisualStudioVersion = 18.4.11612.150 stable
+VisualStudioVersion = 18.4.11612.150
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rowmance.Application", "Rowmance.Application\Rowmance.Application.csproj", "{1AEA865D-425E-4FFB-BAA0-4A875B61135A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rowmance.Infrastructure", "Rowmance.Infrastructure\Rowmance.Infrastructure.csproj", "{787E7735-DEE9-4CA3-90F6-027D9C37ED19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Romance.Domain", "Romance.Domain\Romance.Domain.csproj", "{39FB22D7-07F5-4294-97FE-644081F037CA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rowmance.Domain", "Romance.Domain\Rowmance.Domain.csproj", "{39FB22D7-07F5-4294-97FE-644081F037CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Romance.WebAPI", "Romance.WebAPI\Romance.WebAPI.csproj", "{CB4A39F9-A4B4-4BA8-B8B6-5F19507DADCD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rowmance.WebAPI", "Romance.WebAPI\Rowmance.WebAPI.csproj", "{CB4A39F9-A4B4-4BA8-B8B6-5F19507DADCD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
