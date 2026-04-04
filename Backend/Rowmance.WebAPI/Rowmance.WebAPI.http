@@ -1,0 +1,6 @@
+@Rowmance.WebAPI_HostAddress = http://localhost:5076
+
+GET {{Rowmance.WebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

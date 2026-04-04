@@ -2,7 +2,7 @@ services:
   webapi:
     build:
       context: .
-      dockerfile: Romance.WebAPI/Dockerfile
+      dockerfile: Rowmance.WebAPI/Dockerfile
     container_name: romance-api
     ports:
       - "8080:8080"
