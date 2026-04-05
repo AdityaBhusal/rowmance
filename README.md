@@ -16,14 +16,14 @@ A straightforward, lightweight theatre ticketing and seat management system.
 
 ## 💻 Tech Stack
 
-* **Frontend:** [Insert e.g., React / Tailwind]
-* **Backend:** [Insert e.g., Node.js / Express]
-* **Database:** [Insert e.g., PostgreSQL / MongoDB]
+* **Frontend:** [Angular]
+* **Backend:** [.NET (10) & FastAPI]
+* **Database:** [PostGreSQL]
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-* [List e.g., Node.js v18+]
+* [.net 10 ]
 * [List e.g., MongoDB / SQL Setup]
 
 ### Installation
