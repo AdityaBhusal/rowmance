@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: Rowmance.WebAPI/Dockerfile
-    container_name: romance-api
+    container_name: rowmance-api
     ports:
       - "8080:8080"
     environment:
