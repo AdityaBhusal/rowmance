@@ -1,0 +1,52 @@
+name: Rowmance CI/CD Pipeline
+
+# 1. THE TRIGGERS
+on:
+  push:
+    branches: [ "main" ]
+    paths-ignore:
+    - '**/*.md'
+    - '.gitignore'
+    
+    
+  pull_request:
+    branches: [ "main" ]
+  # Don't trigger the pipeline if we are just editing the Readme
+    paths-ignore:
+    - '**/*.md'
+    - '.gitignore'
+
+jobs:
+  # 2. THE BUILD/TEST CONDITION (The Safety Net)
+  build-and-test:
+    name: Test Docker Build
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+
+    # This attempts to build the image just like Render does. 
+    # If there is a typo in your Dockerfile, it fails here BEFORE breaking production!
+    - name: Test Build Docker Image
+      run: docker build -f Romance.WebAPI/Dockerfile .
+
+  # 3. THE DEPLOYMENT CONDITION
+  deploy:
+    name: Deploy to Render
+    runs-on: ubuntu-latest
+    needs: build-and-test # This forces the deploy to wait for the build to pass!
+    
+    # ONLY deploy if this is a push/merge to the main branch (ignore Pull Requests)
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+
+    steps:
+    - name: Trigger Render Deployment
+      env:
+        # We store the actual URL safely in GitHub Secrets
+        deploy_url: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+      run: |
+        curl "$deploy_url"
