@@ -1,6 +1,6 @@
 name: Rowmance CI/CD Pipeline
 
-# 1. THE TRIGGERS
+
 on:
   push:
     branches: [ "main" ]
@@ -11,13 +11,13 @@ on:
     
   pull_request:
     branches: [ "main" ]
-  # Don't trigger the pipeline if we are just editing the Readme
+
     paths-ignore:
     - '**/*.md'
     - '.gitignore'
 
 jobs:
-  # 2. THE BUILD/TEST CONDITION (The Safety Net)
+
   build-and-test:
     name: Test Docker Build
     runs-on: ubuntu-latest
@@ -45,7 +45,7 @@ jobs:
     steps:
     - name: Trigger Render Deployment
       env:
-        # We store the actual URL safely in GitHub Secrets
+        # github secrets
         deploy_url: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
       run: |
         curl "$deploy_url"
