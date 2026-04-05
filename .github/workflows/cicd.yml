@@ -32,7 +32,7 @@ jobs:
     # This attempts to build the image just like Render does. 
     # If there is a typo in your Dockerfile, it fails here BEFORE breaking production!
     - name: Test Build Docker Image
-      run: docker build -f Romance.WebAPI/Dockerfile .
+      run: docker build -f Rowmance.WebAPI/Dockerfile .
 
   # 3. THE DEPLOYMENT CONDITION
   deploy:
